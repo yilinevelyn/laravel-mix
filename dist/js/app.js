@@ -32,7 +32,7 @@ __webpack_require__.r(__webpack_exports__);
         return alertify.error('名稱未輸入');
       }
 
-      console.log(this.name);
+      this.$emit('add', this.name);
     },
     enterDoAdd: function enterDoAdd(e) {
       if (e.keyCode == 13 || e.which == 13) {
@@ -934,7 +934,11 @@ new Vue({
       title: 'Student List'
     };
   },
-  methods: {}
+  methods: {
+    doAdd: function doAdd(name) {
+      console.log(name);
+    }
+  }
 });
 
 /***/ }),

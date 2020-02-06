@@ -21,7 +21,7 @@ export default {
             if (!this.name) {
                 return alertify.error('名稱未輸入');
             }
-            console.log(this.name);
+            this.$emit('add', this.name);
         },
         enterDoAdd(e) {
             if (e.keyCode == 13 || e.which == 13) {
