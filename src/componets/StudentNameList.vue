@@ -45,9 +45,14 @@ export default ({
             });
         },
         removeIndex(index) {
-            console.log(index);
             this.items.splice(index, 1);
         },
+        doAdd(name) {
+            this.items.push({
+                name: name,
+                students: []
+            });
+        }
     }
 })
 </script>
